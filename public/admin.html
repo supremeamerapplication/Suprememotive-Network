@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SupremeMotive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-admin">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>SupremeMotive</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Buy Coffee</a></li>
+                <li><a href="profile.html" class="btn-login">Profile</a></li>
+                <li><a href="login.html" class="btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="admin-user">
+                <img src="assets/images/default.jpg" alt="Admin" class="admin-avatar">
+                <div class="admin-info">
+                    <h3>Supreme</h3>
+                    <p>Admin Panel</p>
+                </div>
+            </div>
+
+            <nav class="admin-nav">
+                <a href="#" class="nav-item active">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">📝</span> View All Posts
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">✏️</span> Manage All Posts
+                </a>
+            </nav>
+
+            <div class="admin-section">
+                <h5>Support</h5>
+                <a href="#" class="support-item">
+                    <span class="icon">💬</span> Suggest a Feature
+                </a>
+                <a href="#" class="support-item">
+                    <span class="icon">🔍</span> Persistent - All feats
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Admin Content -->
+        <main class="admin-main">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Admin Dashboard</h1>
+                <p>Welcome Mods, SupremeMotive •</p>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="action-card">
+                    <span class="action-icon">📝</span>
+                    <span>View All Posts</span>
+                </button>
+                <button class="action-card">
+                    <span class="action-icon">⚙️</span>
+                    <span>Manage All Posts</span>
+                </button>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Posts</h4>
+                    <p class="stat-value">128</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Total Users</h4>
+                    <p class="stat-value">1.2K</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Total Comments</h4>
+                    <p class="stat-value">456</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Engagement Rate</h4>
+                    <p class="stat-value">78%</p>
+                </div>
+            </div>
+
+            <!-- Latest Posts Section -->
+            <section class="latest-posts">
+                <h2>Latest Posts</h2>
+                <div class="posts-table">
+                    <div class="table-header">
+                        <div class="col-title">Title</div>
+                        <div class="col-author">Author</div>
+                        <div class="col-date">Date</div>
+                        <div class="col-actions">Actions</div>
+                    </div>
+                    <div id="admin-posts" class="table-body">
+                        <!-- Posts will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Section -->
+            <section class="support-section">
+                <h2>Support & Donate</h2>
+                <div class="support-info">
+                    <p>Help us continue this mission</p>
+                    <div class="support-methods">
+                        <button class="support-method">
+                            <span>✓</span> Opay
+                        </button>
+                        <button class="support-method">
+                            <span>💰</span> PalmPay
+                        </button>
+                        <button class="support-method">
+                            <span>Ξ</span> ETH BTC
+                        </button>
+                        <button class="support-method">
+                            <span>◎</span> SOL
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>SupremeMotive</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SupremeMotive Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

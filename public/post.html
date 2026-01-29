@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - SupremeMotive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>SupremeMotive</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Buy Coffee</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="post-detail-container">
+            <!-- Main Post -->
+            <article class="card post-detail">
+                <div class="post-header">
+                    <img src="assets/images/default.jpg" alt="Author" class="post-avatar">
+                    <div class="post-meta">
+                        <h3 class="post-author">Ethan Gray</h3>
+                        <span class="post-date">Jan 2026</span>
+                    </div>
+                    <span class="post-badge">✓ Verified</span>
+                </div>
+                <div class="post-image">
+                    <img src="assets/images/banner.jpg" alt="Post Image">
+                </div>
+                <div class="post-content">
+                    <h2>Success Starts With Discipline</h2>
+                    <p>Discipline is the bridge between dreams and achievement. Learn how daily habits shape your future and unlock your true potential.</p>
+                    <p>Consistency builds champions. Every small step compounds into massive results. Your future self will thank you for the decisions you make today.</p>
+                </div>
+                <div class="post-stats">
+                    <span>❤️ 24 Likes</span>
+                    <span>💬 6 Comments</span>
+                    <span>↗️ Share</span>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn">❤️ Like</button>
+                    <button class="action-btn">💬 Comment</button>
+                    <button class="action-btn">↗️ Share</button>
+                </div>
+            </article>
+
+            <!-- Comments Section -->
+            <div class="card comments-section">
+                <h3>Comments</h3>
+                
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <img src="assets/images/default.jpg" alt="Your Avatar" class="comment-avatar">
+                    <div class="comment-input-group">
+                        <input type="text" placeholder="Add a comment..." class="comment-input">
+                        <button class="btn-primary">Post Comment</button>
+                    </div>
+                </div>
+
+                <!-- Comments List -->
+                <div id="comments-list" class="comments-list">
+                    <!-- Comments will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar-right">
+            <div class="card about-author">
+                <h4>About Author</h4>
+                <img src="assets/images/default.jpg" alt="Ethan Gray" class="author-image">
+                <h3>Ethan Gray</h3>
+                <p class="author-role">CEO & Motivational Speaker</p>
+                <p class="author-bio">Passionate about helping others achieve their dreams through discipline and consistent action.</p>
+                <button class="btn-follow-full">Follow</button>
+            </div>
+
+            <div class="card related-posts">
+                <h4>More from Author</h4>
+                <ul class="related-list">
+                    <li><a href="#">The Power of Daily Habits</a></li>
+                    <li><a href="#">Building Unstoppable Mindset</a></li>
+                    <li><a href="#">Success Principles</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>SupremeMotive</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Social</h5>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Report Issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SupremeMotive Network. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/comments.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
