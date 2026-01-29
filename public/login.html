@@ -3,96 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SupremeMotive</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/auth.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Login - SupremeMotive Network</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="icon" href="/assets/images/favicon.ico">
 </head>
 <body>
-    <!-- Navigation Header -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <h1>SupremeMotive</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Buy Coffee</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
     <div class="auth-container">
-        <div class="auth-box login-box">
+        <div class="auth-card">
             <div class="auth-header">
                 <h1>Welcome Back</h1>
-                <p>Login to your SupremeMotive account</p>
+                <p>Login to your SupremeMotive Network account</p>
             </div>
-
-            <form id="login-form" class="auth-form">
+            
+            <div id="authError" class="auth-error"></div>
+            
+            <form id="loginForm" class="auth-form">
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
                 </div>
-
+                
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" class="form-control" required>
                 </div>
-
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Remember me</label>
-                </div>
-
-                <button type="submit" class="btn-auth">Login</button>
-
-                <div class="auth-divider">
-                    <span>or continue with</span>
-                </div>
-
-                <div class="social-auth">
-                    <button type="button" class="social-btn google">
-                        <span>G</span> Google
-                    </button>
-                    <button type="button" class="social-btn github">
-                        <span>⚙️</span> GitHub
-                    </button>
-                </div>
-
-                <div class="auth-footer">
-                    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
-                    <p><a href="#">Forgot your password?</a></p>
-                </div>
+                
+                <button type="submit" class="btn">Login</button>
             </form>
-        </div>
-
-        <div class="auth-illustration">
-            <img src="assets/images/banner.jpg" alt="Success">
-            <h2>Join SupremeMotive</h2>
-            <p>Start your journey to success with our supportive community.</p>
+            
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="/signup.html">Sign up here</a></p>
+                <p><a href="/">← Back to Home</a></p>
+            </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-bottom">
-            <p>&copy; 2026 SupremeMotive Network. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/config.js"></script>
-    <script src="js/supabase.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/auth.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="/js/supabase.js"></script>
+    <script src="/js/auth.js"></script>
 </body>
 </html>
