@@ -917,6 +917,38 @@ body {
     transform: translateX(5px);
 }
 
+/* Homepage Introduction */
+
+.intro-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+
+  max-width: 850px;
+  margin: 3rem auto 2rem;
+
+  line-height: 1.5;
+
+  color: #0f172a;
+
+  letter-spacing: -0.3px;
+}
+
+/* Dark Mode */
+
+[data-theme="dark"] .intro-title {
+  color: #f8fafc;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+}
+
 /* ============================================
    MISSION CARD
    ============================================ */
