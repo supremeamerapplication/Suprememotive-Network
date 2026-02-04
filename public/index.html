@@ -1,232 +1,747 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SupremeMotive - Social Network for Success</title>
+    <title>SupremeMotive - Social Network for Success-Driven Individuals</title>
+    <meta name="description" content="Join SupremeMotive Network - The premier platform for success-driven individuals. Connect, share, and grow with like-minded achievers.">
+    <meta name="keywords" content="motivation, success, social network, productivity, self-improvement">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://suprememotive.com/">
+    <meta property="og:title" content="SupremeMotive - Network for Success">
+    <meta property="og:description" content="Connect with achievers, share success strategies, and grow together.">
+    <meta property="og:image" content="https://suprememotive.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://suprememotive.com/">
+    <meta property="twitter:title" content="SupremeMotive - Network for Success">
+    <meta property="twitter:description" content="Connect with achievers, share success strategies, and grow together.">
+    <meta property="twitter:image" content="https://suprememotive.com/assets/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6366f1">
+    <meta name="msapplication-TileColor" content="#0f172a">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Header -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h1>SupremeMotive</h1>
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon">🚀</div>
+                    <h1>Supreme<span class="logo-gradient">Motive</span></h1>
+                </a>
             </div>
+            
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Buy Coffee</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
+                <li><a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="explore.html" class="nav-link">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span>
+                </a></li>
+                <li><a href="communities.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Communities</span>
+                </a></li>
+                <li><a href="resources.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Resources</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a></li>
+                <li><a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a></li>
+                <li class="nav-actions">
+                    <button class="btn btn-notification" aria-label="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="btn btn-theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                <li><a href="login.html" class="btn btn-primary btn-login">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </a></li>
+                <li><a href="signup.html" class="btn btn-outline btn-signup">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Join Free</span>
+                </a></li>
             </ul>
-            <div class="hamburger">
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Featured Post Hero -->
-    <section class="featured-post">
+    <!-- Welcome Banner -->
+    <section class="welcome-banner">
         <div class="container">
-            <div class="post-card featured">
-                <div class="post-image">
-                    <img src="assets/images/success-mountain.jpg" alt="Success Journey">
-                </div>
-                <div class="post-content">
-                    <div class="post-header">
-                        <div class="post-author-info">
-                            <img src="assets/images/supreme-avatar.jpg" alt="Supreme Motive" class="post-avatar">
-                            <div class="post-meta">
-                                <span class="post-author">Supreme Motive</span>
-                                <span class="post-date">Jan 2026</span>
-                            </div>
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h2 class="banner-title">Welcome to SupremeMotive Network</h2>
+                    <p class="banner-subtitle">Where ambition meets community. Connect with like-minded achievers, share insights, and elevate your success journey.</p>
+                    <div class="banner-stats">
+                        <div class="stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Active Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5,000+</span>
+                            <span class="stat-label">Success Stories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Expert Mentors</span>
                         </div>
                     </div>
-                    <h2>Success Starts With Discipline</h2>
-                    <p>Discipline is the bridge between dreams and achievement. Learn how daily habits shape your future and unlock your true potential.</p>
-                    <div class="post-stats">
-                        <span>❤️ 24</span>
-                        <span>💬 6</span>
-                        <span>📤 Share</span>
+                </div>
+                <div class="banner-cta">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Journey
+                    </button>
+                    <button class="btn btn-secondary btn-lg">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Intro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post Hero -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-crown"></i>
+                    Featured Success Story
+                </h2>
+                <a href="#" class="section-link">
+                    View All Stories
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="featured-post">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="assets/images/success-mountain.jpg" alt="Climbing the Mountain of Success" loading="lazy">
+                        <div class="featured-badge">
+                            <i class="fas fa-star"></i>
+                            Featured Story
+                        </div>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <img src="assets/images/supreme-avatar.jpg" alt="Supreme Motive" class="author-avatar">
+                                <div class="author-details">
+                                    <span class="author-name">Supreme Motive</span>
+                                    <span class="author-role">Founder & Motivational Speaker</span>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <span class="post-date">
+                                    <i class="far fa-calendar"></i>
+                                    January 15, 2026
+                                </span>
+                                <span class="read-time">
+                                    <i class="far fa-clock"></i>
+                                    5 min read
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <h2 class="post-title">The Discipline Blueprint: Building Success One Habit at a Time</h2>
+                        
+                        <p class="post-excerpt">Discover how disciplined daily habits create the foundation for extraordinary achievement. This comprehensive guide reveals the science-backed strategies that transform dreams into tangible results.</p>
+                        
+                        <div class="post-tags">
+                            <span class="tag">#Discipline</span>
+                            <span class="tag">#SuccessHabits</span>
+                            <span class="tag">#Productivity</span>
+                            <span class="tag">#Mindset</span>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <div class="action-stats">
+                                <button class="action-btn like-btn">
+                                    <i class="fas fa-heart"></i>
+                                    <span>2.4K</span>
+                                </button>
+                                <button class="action-btn comment-btn">
+                                    <i class="fas fa-comment"></i>
+                                    <span>386</span>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span>Share</span>
+                                </button>
+                                <button class="action-btn save-btn">
+                                    <i class="far fa-bookmark"></i>
+                                    <span>Save</span>
+                                </button>
+                            </div>
+                            <a href="post-detail.html" class="btn btn-primary read-btn">
+                                Read Full Story
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Feed Section -->
-    <div class="container">
-        <div class="main-grid">
-            <!-- Left Sidebar -->
-            <aside class="sidebar-left">
-                <!-- About SupremeMotive Network -->
-                <div class="card about-network">
-                    <div class="network-header">
-                        <div class="network-logo">
-                            <h3>SupremeMotive</h3>
+    <!-- Main Content Grid -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Sidebar -->
+                <aside class="sidebar sidebar-left">
+                    <!-- Quick Actions -->
+                    <div class="card quick-actions-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-bolt"></i>
+                            Quick Actions
+                        </h3>
+                        <div class="action-buttons">
+                            <button class="action-button primary-action">
+                                <i class="fas fa-edit"></i>
+                                Create Post
+                            </button>
+                            <button class="action-button secondary-action">
+                                <i class="fas fa-video"></i>
+                                Go Live
+                            </button>
+                            <button class="action-button tertiary-action">
+                                <i class="fas fa-calendar-plus"></i>
+                                Schedule Event
+                            </button>
                         </div>
                     </div>
-                    <h4>About SupremeMotive Network</h4>
-                    <div class="network-author">
-                        <img src="assets/images/ethan-gray.jpg" alt="Ethan Gray" class="author-avatar">
-                        <div class="author-info">
-                            <span class="author-name">Ethan Gray</span>
-                            <span class="author-title">Supreme Motive</span>
-                            <span class="author-role">Motivational Speaker & Content Creator</span>
+
+                    <!-- Network Stats -->
+                    <div class="card network-stats-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-chart-line"></i>
+                            Network Activity
+                        </h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-icon">🔥</span>
+                                <span class="stat-value">142</span>
+                                <span class="stat-label">Active Now</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon">💬</span>
+                                <span class="stat-value">89</span>
+                                <span class="stat-label">New Posts</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-value">23</span>
+                                <span class="stat-label">New Members</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="network-description">We inspire the change. Finally in one place to reach us to our goals. Consistency builds momentum, dreams into help. Contact deeper forms.</p>
-                    
-                    <div class="network-actions">
-                        <button class="btn-action write-post">✏️ Write New Post</button>
-                        <button class="btn-action manage-posts">📝 Manage All Posts</button>
-                        <button class="btn-action coffee">☕ Coffee</button>
-                    </div>
-                </div>
 
-                <!-- Support Section -->
-                <div class="card support-section">
-                    <h4>Support</h4>
-                    <div class="support-links">
-                        <a href="#" class="support-link">🌟 SupremeMotive Network</a>
-                        <a href="#" class="support-link">🔧 Bootstrapping - All Modules</a>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- Center Feed -->
-            <main class="feed">
-                <!-- Posts Feed -->
-                <div id="posts-feed" class="posts-container">
-                    <!-- Sample posts will be loaded here by JavaScript -->
-                </div>
-            </main>
-
-            <!-- Right Sidebar -->
-            <aside class="sidebar-right">
-                <!-- Our Mission -->
-                <div class="card mission-card">
-                    <div class="mission-header">
-                        <h4>Our Mission</h4>
-                    </div>
-                    <p>Clearly to have one strong, finally in one place to reach us to our goals. Consistency builds momentum, dreams into help. Contact deeper forms.</p>
-                    
-                    <!-- Comments Section -->
-                    <div class="comments-section">
-                        <div class="comment">
-                            <img src="assets/images/joshua-training.jpg" alt="Joshua Training" class="comment-avatar">
-                            <div class="comment-content">
-                                <span class="comment-author">Joshua Training</span>
-                                <p>Great! Ends without discipline. Consistency builds momentum, dreams into help. Contact deeper forms.</p>
-                                <div class="comment-actions">
-                                    <span class="comment-likes">❤️ 18</span>
-                                    <span class="comment-replies">💬 3</span>
-                                    <button class="comment-share">📤 Share</button>
+                    <!-- About Network -->
+                    <div class="card about-network-card">
+                        <div class="network-header">
+                            <div class="logo-icon-large">🚀</div>
+                            <h3>SupremeMotive Network</h3>
+                        </div>
+                        
+                        <div class="founder-section">
+                            <div class="founder-header">
+                                <img src="assets/images/ethan-gray.jpg" alt="Ethan Gray" class="founder-avatar">
+                                <div class="founder-info">
+                                    <h4>Ethan Gray</h4>
+                                    <p class="founder-title">Founder & Lead Motivator</p>
                                 </div>
+                            </div>
+                            <p class="founder-bio">Transforming lives through disciplined action and community support. Building bridges between ambition and achievement.</p>
+                        </div>
+                        
+                        <div class="network-description">
+                            <p>We are the catalyst for change. Finally, a unified platform where dreams meet execution. Consistency builds momentum, momentum builds success.</p>
+                        </div>
+                        
+                        <div class="network-metrics">
+                            <div class="metric">
+                                <span class="metric-value">5+</span>
+                                <span class="metric-label">Years Impact</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">50K+</span>
+                                <span class="metric-label">Lives Changed</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Community Focus</span>
                             </div>
                         </div>
                         
-                        <div class="comment">
-                            <img src="assets/images/ethan-gray.jpg" alt="Ethan Gray" class="comment-avatar">
-                            <div class="comment-content">
-                                <span class="comment-author">Ethan Gray</span>
-                                <span class="comment-badge">ADMIN</span>
-                                <p>Great! Ends without discipline. Consistency builds momentum, dreams into help. Contact deeper forms.</p>
-                                <div class="comment-actions">
-                                    <span class="comment-likes">❤️ 18</span>
-                                    <span class="comment-replies">💬 3</span>
-                                    <button class="comment-share">📤 Share</button>
+                        <div class="network-actions">
+                            <button class="btn btn-primary btn-block">
+                                <i class="fas fa-hands-helping"></i>
+                                Join Community
+                            </button>
+                            <button class="btn btn-secondary btn-block">
+                                <i class="fas fa-envelope"></i>
+                                Contact Founder
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Trending Topics -->
+                    <div class="card trending-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-fire"></i>
+                            Trending Topics
+                        </h3>
+                        <ul class="trending-list">
+                            <li class="trending-item">
+                                <span class="trend-rank">#1</span>
+                                <a href="#" class="trend-link">
+                                    <span class="trend-text">Morning Routine Optimization</span>
+                                    <span class="trend-posts">245 posts</span>
+                                </a>
+                            </li>
+                            <li class="trending-item">
+                                <span class="trend-rank">#2</span>
+                                <a href="#" class="trend-link">
+                                    <span class="trend-text">Digital Nomad Success</span>
+                                    <span class="trend-posts">189 posts</span>
+                                </a>
+                            </li>
+                            <li class="trending-item">
+                                <span class="trend-rank">#3</span>
+                                <a href="#" class="trend-link">
+                                    <span class="trend-text">Mindfulness & Productivity</span>
+                                    <span class="trend-posts">156 posts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Feed -->
+                <section class="main-feed">
+                    <!-- Post Creator -->
+                    <div class="card post-creator-card">
+                        <div class="creator-header">
+                            <img src="assets/images/user-avatar.jpg" alt="Your Avatar" class="creator-avatar">
+                            <div class="creator-input-container">
+                                <input type="text" placeholder="Share your success journey, ask a question, or inspire others..." class="creator-input">
+                                <div class="creator-options">
+                                    <button class="option-btn" title="Add Photo">
+                                        <i class="fas fa-image"></i>
+                                    </button>
+                                    <button class="option-btn" title="Add Video">
+                                        <i class="fas fa-video"></i>
+                                    </button>
+                                    <button class="option-btn" title="Add Poll">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </button>
+                                    <button class="option-btn" title="Add Achievement">
+                                        <i class="fas fa-trophy"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="comment-input">
-                            <input type="text" placeholder="Comment (write to comment)" class="comment-field">
-                            <button class="btn-comment">Post Comment</button>
+                    </div>
+
+                    <!-- Feed Filter -->
+                    <div class="feed-filter">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active">
+                                <i class="fas fa-newspaper"></i>
+                                For You
+                            </button>
+                            <button class="filter-tab">
+                                <i class="fas fa-fire"></i>
+                                Trending
+                            </button>
+                            <button class="filter-tab">
+                                <i class="fas fa-user-friends"></i>
+                                Following
+                            </button>
+                            <button class="filter-tab">
+                                <i class="fas fa-star"></i>
+                                Featured
+                            </button>
+                        </div>
+                        <div class="feed-sort">
+                            <select class="sort-select">
+                                <option value="latest">Latest First</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="discussed">Most Discussed</option>
+                            </select>
                         </div>
                     </div>
-                </div>
 
-                <!-- Support & Donate -->
-                <div class="card support-donate">
-                    <h4>Support & Donate</h4>
-                    <div class="payment-methods">
-                        <button class="payment-btn opay">
-                            <span class="icon">✓</span>
-                            Opay
-                        </button>
-                        <button class="payment-btn palmpay">
-                            <span class="icon">💰</span>
-                            PalmPay
-                        </button>
-                        <button class="payment-btn crypto">
-                            <span class="icon">₿</span>
-                            USDT BTC
-                        </button>
-                        <button class="payment-btn eth">
-                            <span class="icon">Ξ</span>
-                            ETH
-                        </button>
-                        <button class="payment-btn sol">
-                            <span class="icon">◎</span>
-                            SOL
+                    <!-- Posts Feed -->
+                    <div id="posts-feed" class="posts-feed">
+                        <!-- Posts will be dynamically loaded here -->
+                        <div class="loading-posts">
+                            <div class="loading-spinner"></div>
+                            <p>Loading inspiring content...</p>
+                        </div>
+                    </div>
+
+                    <!-- Load More -->
+                    <div class="load-more-container">
+                        <button class="btn btn-outline btn-load-more">
+                            <i class="fas fa-sync-alt"></i>
+                            Load More Stories
                         </button>
                     </div>
-                </div>
-            </aside>
+                </section>
+
+                <!-- Right Sidebar -->
+                <aside class="sidebar sidebar-right">
+                    <!-- Online Members -->
+                    <div class="card online-members-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-circle online-dot"></i>
+                            Online Now
+                        </h3>
+                        <div class="members-list">
+                            <div class="member">
+                                <img src="assets/images/member1.jpg" alt="Alex Johnson" class="member-avatar">
+                                <div class="member-info">
+                                    <span class="member-name">Alex Johnson</span>
+                                    <span class="member-status">Entrepreneur</span>
+                                </div>
+                            </div>
+                            <div class="member">
+                                <img src="assets/images/member2.jpg" alt="Sarah Chen" class="member-avatar">
+                                <div class="member-info">
+                                    <span class="member-name">Sarah Chen</span>
+                                    <span class="member-status">Productivity Coach</span>
+                                </div>
+                            </div>
+                            <div class="member">
+                                <img src="assets/images/member3.jpg" alt="Marcus Lee" class="member-avatar">
+                                <div class="member-info">
+                                    <span class="member-name">Marcus Lee</span>
+                                    <span class="member-status">Investor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all-link">
+                            View All 142 Online Members
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Upcoming Events -->
+                    <div class="card events-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-calendar-alt"></i>
+                            Upcoming Events
+                        </h3>
+                        <div class="event-list">
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-day">25</span>
+                                    <span class="event-month">JAN</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4 class="event-title">Master Your Morning Routine</h4>
+                                    <p class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        10:00 AM EST
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <span class="event-day">28</span>
+                                    <span class="event-month">JAN</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4 class="event-title">Q1 Goal Setting Workshop</h4>
+                                    <p class="event-time">
+                                        <i class="far fa-clock"></i>
+                                        2:00 PM EST
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary btn-block">
+                            <i class="fas fa-plus"></i>
+                            Create Event
+                        </button>
+                    </div>
+
+                    <!-- Support Network -->
+                    <div class="card support-card">
+                        <div class="support-header">
+                            <h3>
+                                <i class="fas fa-heart"></i>
+                                Support Our Mission
+                            </h3>
+                            <p class="support-subtitle">Help us empower more achievers</p>
+                        </div>
+                        
+                        <div class="support-options">
+                            <div class="support-option">
+                                <div class="option-icon">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="option-details">
+                                    <h4>Buy Coffee</h4>
+                                    <p>Support our daily work</p>
+                                </div>
+                                <button class="btn btn-small">
+                                    <i class="fas fa-mug-hot"></i>
+                                    $5
+                                </button>
+                            </div>
+                            
+                            <div class="support-option">
+                                <div class="option-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <div class="option-details">
+                                    <h4>Premium Access</h4>
+                                    <p>Unlock all features</p>
+                                </div>
+                                <button class="btn btn-small btn-primary">
+                                    <i class="fas fa-gem"></i>
+                                    Upgrade
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="donation-methods">
+                            <h4>Quick Donation</h4>
+                            <div class="payment-grid">
+                                <button class="payment-method">
+                                    <i class="fab fa-bitcoin"></i>
+                                    <span>Bitcoin</span>
+                                </button>
+                                <button class="payment-method">
+                                    <i class="fab fa-ethereum"></i>
+                                    <span>Ethereum</span>
+                                </button>
+                                <button class="payment-method">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>PayPal</span>
+                                </button>
+                                <button class="payment-method">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Resources -->
+                    <div class="card resources-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Quick Resources
+                        </h3>
+                        <div class="resources-list">
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-book"></i>
+                                Success Library
+                            </a>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-video"></i>
+                                Masterclass Videos
+                            </a>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-file-alt"></i>
+                                Templates
+                            </a>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-chart-line"></i>
+                                Tools & Calculators
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h5>SupremeMotive</h5>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🚀</div>
+                        <div class="logo-text">
+                            <h3>SupremeMotive</h3>
+                            <p class="tagline">Fueling Your Success Journey</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Connecting ambitious individuals worldwide. Building a community where success is shared, celebrated, and multiplied.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Stay Updated</h4>
+                    <p class="newsletter-text">Get weekly motivation and success tips</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-section">
-                <h5>Legal</h5>
-                <ul>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="#">Cookies</a></li>
-                </ul>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 SupremeMotive Network. All rights reserved. Empowering 50,000+ achievers worldwide.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                    <a href="sitemap.html">Sitemap</a>
+                    <a href="accessibility.html">Accessibility</a>
+                </div>
             </div>
-            <div class="footer-section">
-                <h5>Social</h5>
-                <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h5>Support</h5>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Report Issue</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 SupremeMotive Network. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/config.js"></script>
     <script src="js/supabase.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/posts.js"></script>
+    <script src="js/notifications.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                document.body.classList.toggle('light-theme');
+                const icon = themeToggle.querySelector('i');
+                icon.classList.toggle('fa-moon');
+                icon.classList.toggle('fa-sun');
+            });
+
+            // Mobile menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
