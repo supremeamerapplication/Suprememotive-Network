@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - SupremeMotive</title>
+    <link rel="stylesheet" href="cool.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🚀 SupremeMotive</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboout.html">About</a>
+                <a href="contact.htm">Contact</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Welcome to SupremeMotive</h1>
+                <p>Join thousands building their best selves</p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="form-wrapper" id="loginForm">
+                <form class="auth-form" onsubmit="handleLogin(event)">
+                    <h2>Sign In</h2>
+                    
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="login-email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                        <span class="error-message" id="login-email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input 
+                            type="password" 
+                            id="login-password" 
+                            name="password" 
+                            placeholder="••••••••"
+                            required
+                        >
+                        <span class="error-message" id="login-password-error"></span>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-link" onclick="toggleForgotPassword()">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Sign In</button>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn" onclick="loginWithGoogle()">
+                            <span>📧 Google</span>
+                        </button>
+                        <button type="button" class="social-btn github-btn" onclick="loginWithGithub()">
+                            <span>🐙 GitHub</span>
+                        </button>
+                    </div>
+
+                    <p class="form-footer">
+                        Don't have an account? 
+                        <a href="#" onclick="toggleForms()">Sign up</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-wrapper" id="signupForm" style="display: none;">
+                <form class="auth-form" onsubmit="handleSignup(event)">
+                    <h2>Create Account</h2>
+
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="signup-name" 
+                            name="name" 
+                            placeholder="John Doe"
+                            required
+                        >
+                        <span class="error-message" id="signup-name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="signup-email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                        <span class="error-message" id="signup-email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input 
+                            type="password" 
+                            id="signup-password" 
+                            name="password" 
+                            placeholder="••••••••"
+                            required
+                        >
+                        <span class="password-strength" id="strength-meter"></span>
+                        <span class="error-message" id="signup-password-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="signup-confirm" 
+                            name="confirm" 
+                            placeholder="••••••••"
+                            required
+                        >
+                        <span class="error-message" id="signup-confirm-error"></span>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            I agree to the Terms of Service and Privacy Policy
+                        </label>
+                        <span class="error-message" id="signup-terms-error"></span>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Create Account</button>
+
+                    <div class="divider">or</div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn" onclick="signupWithGoogle()">
+                            <span>📧 Google</span>
+                        </button>
+                        <button type="button" class="social-btn github-btn" onclick="signupWithGithub()">
+                            <span>🐙 GitHub</span>
+                        </button>
+                    </div>
+
+                    <p class="form-footer">
+                        Already have an account? 
+                        <a href="#" onclick="toggleForms()">Sign in</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Forgot Password Form -->
+            <div class="form-wrapper" id="forgotForm" style="display: none;">
+                <form class="auth-form" onsubmit="handleForgotPassword(event)">
+                    <h2>Reset Password</h2>
+                    <p class="form-description">Enter your email and we'll send you a link to reset your password.</p>
+
+                    <div class="form-group">
+                        <label for="forgot-email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="forgot-email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                        <span class="error-message" id="forgot-email-error"></span>
+                    </div>
+
+                    <div id="reset-success" class="success-message" style="display: none;">
+                        ✓ Check your email for reset instructions
+                    </div>
+
+                    <button type="submit" class="auth-btn">Send Reset Link</button>
+
+                    <p class="form-footer">
+                        <a href="#" onclick="toggleForgotPassword()">← Back to Sign In</a>
+                    </p>
+                </form>
+            </div>
+
+            <!-- Status Messages -->
+            <div id="authStatus" class="auth-status"></div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="auth-benefits">
+            <div class="benefit-item">
+                <div class="benefit-icon">📚</div>
+                <h3>Learn Daily</h3>
+                <p>Access exclusive motivational content and success strategies</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🤝</div>
+                <h3>Connect</h3>
+                <p>Join a community of like-minded individuals pursuing greatness</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🚀</div>
+                <h3>Grow</h3>
+                <p>Track your progress and achieve your goals with our platform</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">💪</div>
+                <h3>Inspire</h3>
+                <p>Share your journey and inspire others in the community</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SupremeMotive Network</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="aboout.html">About</a>
+            <a href="contact.htm">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+            const html = document.documentElement;
+            if (html.getAttribute("data-theme") === "light") {
+                html.setAttribute("data-theme", "dark");
+                toggle.textContent = "☀️";
+            } else {
+                html.setAttribute("data-theme", "light");
+                toggle.textContent = "🌙";
+            }
+        });
+
+        function showStatus(message, isError = false) {
+            const statusDiv = document.getElementById('authStatus');
+            statusDiv.textContent = message;
+            statusDiv.className = `auth-status ${isError ? 'error' : 'success'}`;
+            statusDiv.style.display = 'block';
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+        }
+
+        function toggleForms() {
+            clearErrors();
+            document.getElementById('loginForm').style.display = document.getElementById('loginForm').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('signupForm').style.display = document.getElementById('signupForm').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('forgotForm').style.display = 'none';
+        }
+
+        function toggleForgotPassword() {
+            clearErrors();
+            document.getElementById('loginForm').style.display = document.getElementById('loginForm').style.display === 'none' ? 'block' : 'none';
+            document.getElementById('forgotForm').style.display = document.getElementById('forgotForm').style.display === 'none' ? 'block' : 'none';
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            clearErrors();
+
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            if (!validateEmail(email)) {
+                document.getElementById('login-email-error').textContent = 'Please enter a valid email';
+                return;
+            }
+
+            if (password.length < 6) {
+                document.getElementById('login-password-error').textContent = 'Password must be at least 6 characters';
+                return;
+            }
+
+            // Simulate login
+            showStatus('✓ Signing in...', false);
+            setTimeout(() => {
+                localStorage.setItem('user', JSON.stringify({ email, name: email.split('@')[0] }));
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            clearErrors();
+
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirm = document.getElementById('signup-confirm').value;
+            const terms = document.querySelector('input[name="terms"]').checked;
+
+            let hasError = false;
+
+            if (name.length < 2) {
+                document.getElementById('signup-name-error').textContent = 'Name must be at least 2 characters';
+                hasError = true;
+            }
+
+            if (!validateEmail(email)) {
+                document.getElementById('signup-email-error').textContent = 'Please enter a valid email';
+                hasError = true;
+            }
+
+            if (password.length < 8) {
+                document.getElementById('signup-password-error').textContent = 'Password must be at least 8 characters';
+                hasError = true;
+            }
+
+            if (password !== confirm) {
+                document.getElementById('signup-confirm-error').textContent = 'Passwords do not match';
+                hasError = true;
+            }
+
+            if (!terms) {
+                document.getElementById('signup-terms-error').textContent = 'You must agree to the terms';
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            showStatus('✓ Creating account...', false);
+            setTimeout(() => {
+                localStorage.setItem('user', JSON.stringify({ email, name }));
+                window.location.href = 'index.html';
+            }, 1000);
+        }
+
+        function handleForgotPassword(event) {
+            event.preventDefault();
+            clearErrors();
+
+            const email = document.getElementById('forgot-email').value;
+
+            if (!validateEmail(email)) {
+                document.getElementById('forgot-email-error').textContent = 'Please enter a valid email';
+                return;
+            }
+
+            document.getElementById('reset-success').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('forgot-email').value = '';
+                toggleForgotPassword();
+            }, 3000);
+        }
+
+        function loginWithGoogle() {
+            showStatus('🚀 Redirecting to Google...', false);
+            setTimeout(() => {
+                alert('Google login integration - Connect your Supabase OAuth');
+            }, 500);
+        }
+
+        function loginWithGithub() {
+            showStatus('🚀 Redirecting to GitHub...', false);
+            setTimeout(() => {
+                alert('GitHub login integration - Connect your Supabase OAuth');
+            }, 500);
+        }
+
+        function signupWithGoogle() {
+            showStatus('🚀 Redirecting to Google...', false);
+            setTimeout(() => {
+                alert('Google signup integration - Connect your Supabase OAuth');
+            }, 500);
+        }
+
+        function signupWithGithub() {
+            showStatus('🚀 Redirecting to GitHub...', false);
+            setTimeout(() => {
+                alert('GitHub signup integration - Connect your Supabase OAuth');
+            }, 500);
+        }
+
+        // Password strength meter
+        document.getElementById('signup-password')?.addEventListener('input', function() {
+            const strength = calculatePasswordStrength(this.value);
+            const meter = document.getElementById('strength-meter');
+            meter.textContent = strength.text;
+            meter.className = 'password-strength ' + strength.level;
+        });
+
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            const levels = [
+                { text: '', level: '' },
+                { text: 'Weak', level: 'weak' },
+                { text: 'Fair', level: 'fair' },
+                { text: 'Good', level: 'good' },
+                { text: 'Strong', level: 'strong' }
+            ];
+            return levels[strength];
+        }
+    </script>
+</body>
+</html>
