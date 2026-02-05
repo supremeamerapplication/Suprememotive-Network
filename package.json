@@ -2,13 +2,12 @@
   "name": "suprememotive-network",
   "version": "1.0.0",
   "description": "A modern, inspirational blog platform with dark/light theme toggle and Supabase integration",
-  "main": "pubulic/index.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "python -m http.server 8000 --directory pubulic",
-    "serve": "npx serve pubulic",
+    "start": "python -m http.server 8000 --directory public",
+    "serve": "npx serve public",
     "lint": "eslint . --ext .js,.html",
     "format": "prettier --write \"**/*.{js,html,css,json,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -56,4 +55,3 @@
     ]
   }
 }
-
