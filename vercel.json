@@ -1,16 +1,6 @@
 {
   "name": "suprememotive-network",
   "version": "1.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "python -m http.server 8000 --directory public",
-    "serve": "npx serve public",
-    "lint": "eslint . --ext .js,.html",
-    "format": "prettier --write \"**/*.{js,html,css,json,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "blog",
     "supabase",
@@ -30,4 +20,3 @@
     "prettier": "^3.1.0"
   }
 }
-
