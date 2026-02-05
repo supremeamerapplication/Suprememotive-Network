@@ -1,25 +1,6 @@
-
+{
   "name": "suprememotive-network",
-  "version": "1.0.0",  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "python -m http.server 8000 --directory public",
-    "serve": "npx serve public",
-    "lint": "eslint . --ext .js,.html",
-    "format": "prettier --write \"**/*.{js,html,css,json,md}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "blog",
-    "supabase",
-    "motivation",
-    "inspiration",
-    "personal-development",
-    "community"
-  ],
-  "author": "SupremeMotive Team",
-  "license": "MIT",
+  "version": "1.0.0",
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0"
   },
@@ -27,31 +8,5 @@
     "vite": "^5.0.0",
     "eslint": "^8.54.0",
     "prettier": "^3.1.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/suprememotive-network.git"
-  },
-  "bugs": {
-    "url": "https://github.com/yourusername/suprememotive-network/issues"
-  },
-  "homepage": "https://suprememotive.com",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }
-
-
