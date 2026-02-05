@@ -1,54 +1,55 @@
 {
-  "buildCommand": "npm run build",
-  "framework": "html",
-  "outputDirectory": "pubulic",
-  "installCommand": "npm install",
-  "env": {
-    "VITE_SUPABASE_URL": "@supabase_url",
-    "VITE_SUPABASE_ANON_KEY": "@supabase_anon_key"
-  },
-  "git": {
-    "deploymentEnabled": {
-      "main": true
-    }
-  },
+  "version": 2,
+  "public": true,
+  "buildCommand": "echo 'Static site'",
+  "outputDirectory": "./",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     },
     {
-      "source": "/index.html",
+      "source": "/sw.js",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
         }
       ]
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
+      "src": "/(.*\\..*)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(?!.*\\.)",
+      "dest": "/"
     }
   ]
 }
