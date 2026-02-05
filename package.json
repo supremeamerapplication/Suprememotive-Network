@@ -1,8 +1,6 @@
 {
   "name": "suprememotive-network",
-  "version": "1.0.0",
-  "description": "A modern, inspirational blog platform with dark/light theme toggle and Supabase integration",
-  "scripts": {
+  "version": "1.0.0",  "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -55,3 +53,4 @@
     ]
   }
 }
+
