@@ -1,8 +1,6 @@
 {
   "name": "suprememotive-network",
-  "version": "1.0.0",
-
-  "type": "module",
+  "version": "1.0.0",
   "main": "pubulic/index.html",
   "scripts": {
     "dev": "vite",
