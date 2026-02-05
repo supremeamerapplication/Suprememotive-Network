@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support SupremeMotive - Donate</title>
+    <link rel="stylesheet" href="cool.css">
+    <link rel="stylesheet" href="css/donate.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🚀 SupremeMotive</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboout.html">About</a>
+                <a href="contact.htm">Contact</a>
+                <a href="auth.html">Sign In</a>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="donate-container">
+        <div class="donate-header">
+            <h1>Support SupremeMotive</h1>
+            <p>Your contribution helps us inspire thousands to reach their full potential. Every donation, no matter the size, makes a real impact in transforming lives and building a community of excellence.</p>
+        </div>
+
+        <!-- Donation Methods Section -->
+        <div class="donate-content">
+            <div class="donate-info">
+                <h2>Why Support Us?</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📚</div>
+                    <h3>Free Quality Content</h3>
+                    <p>We provide daily motivational content and success strategies completely free. Your donation helps us maintain and expand this mission.</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🎓</div>
+                    <h3>Community Education</h3>
+                    <p>Donations support educational initiatives that help our community members achieve their goals and transform their lives.</p>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🌍</div>
+                    <h3>Global Impact</h3>
+                    <p>Help us reach people worldwide who need motivation and guidance on their journey to success.</p>
+                </div>
+            </div>
+
+            <div class="donate-methods">
+                <h2>Donation Methods</h2>
+
+                <form class="donate-form" onsubmit="handleDonation(event)">
+                    <!-- Amount Selection -->
+                    <div class="amount-selection">
+                        <h3>Select Amount</h3>
+                        <div class="amount-grid">
+                            <button type="button" class="amount-btn" onclick="selectAmount(5)">$5</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(10)">$10</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(25)">$25</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(50)">$50</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(100)">$100</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(250)">$250</button>
+                        </div>
+                        <div class="custom-amount">
+                            <label for="custom-amount">Or Enter Custom Amount:</label>
+                            <input type="number" id="custom-amount" min="1" max="10000" placeholder="Enter amount" onchange="selectAmount(this.value)">
+                        </div>
+                    </div>
+
+                    <!-- Payment Method Selection -->
+                    <h3>Payment Method</h3>
+                    
+                    <div class="donation-option">
+                        <label>
+                            <input type="radio" name="method" value="bank" checked>
+                            Bank Transfer
+                        </label>
+                        <div class="donation-option-description">
+                            <strong>Opay:</strong> 7031924052 - Emmanuel Okafor Ejike<br>
+                            <strong>Palmpay:</strong> 8125955756 - Emmanuel Okafor Ejike
+                        </div>
+                    </div>
+
+                    <div class="donation-option">
+                        <label>
+                            <input type="radio" name="method" value="crypto">
+                            Cryptocurrency
+                        </label>
+                        <div class="donation-option-description">
+                            Coming soon: USDT (BEP20), Bitcoin, Ethereum
+                        </div>
+                    </div>
+
+                    <div class="donation-option">
+                        <label>
+                            <input type="radio" name="method" value="card">
+                            Credit/Debit Card
+                        </label>
+                        <div class="donation-option-description">
+                            Coming soon: Secure payment processing
+                        </div>
+                    </div>
+
+                    <!-- Donor Information -->
+                    <h3>Your Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="donor-name">Full Name</label>
+                        <input type="text" id="donor-name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donor-email">Email Address</label>
+                        <input type="email" id="donor-email" placeholder="your@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donor-message">Message (Optional)</label>
+                        <textarea id="donor-message" placeholder="Share a message or comment..."></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="receipt" checked>
+                            Send me a donation receipt
+                        </label>
+                        <label class="checkbox-label" style="margin-top: 0.75rem;">
+                            <input type="checkbox" id="anonymous">
+                            Make this donation anonymous
+                        </label>
+                    </div>
+
+                    <button type="submit" class="donate-btn" id="donate-btn">
+                        Donate $0 Now
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Perks of Donating -->
+        <section class="donation-perks">
+            <div class="perk-card">
+                <div class="perk-icon">🎖️</div>
+                <h3>Donor Recognition</h3>
+                <p>Your generosity is celebrated. Be featured on our Donors Wall of Honor.</p>
+            </div>
+            <div class="perk-card">
+                <div class="perk-icon">⭐</div>
+                <h3>Exclusive Access</h3>
+                <p>Get early access to new content and exclusive community events.</p>
+            </div>
+            <div class="perk-card">
+                <div class="perk-icon">📧</div>
+                <h3>Special Updates</h3>
+                <p>Receive special updates about how your donation is making an impact.</p>
+            </div>
+        </section>
+
+        <!-- Founder Message -->
+        <div class="founder-section" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%); border-radius: 12px; padding: 3rem 2rem; margin: 3rem 0; text-align: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                <div style="width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 80px; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); border: 4px solid rgba(255, 255, 255, 0.5);">
+                    👨‍💼
+                </div>
+                <div>
+                    <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Alex Supreme</h2>
+                    <p style="color: var(--accent-color, #3b82f6); font-weight: 600; margin-bottom: 1rem;">Founder & CEO</p>
+                    <p style="font-style: italic; max-width: 500px; margin: 0 auto; line-height: 1.8;">
+                        "Every donation fuels our mission to inspire millions to achieve greatness. Your support directly impacts the lives of people worldwide who are on their journey to excellence. Thank you for believing in us."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Contact Info -->
+        <div class="about-section" style="text-align: center;">
+            <h2>Other Ways to Support</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3 style="color: var(--accent); margin-top: 0;">📱 WhatsApp</h3>
+                    <p><a href="https://wa.me/2347031924052" style="color: var(--accent);">+234 703 192 4052</a></p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent); margin-top: 0;">📧 Email</h3>
+                    <p><a href="mailto:suprememotive43@gmail.com" style="color: var(--accent);">suprememotive43@gmail.com</a></p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent); margin-top: 0;">🤝 Partnerships</h3>
+                    <p>Interested in sponsoring us? Let's talk!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SupremeMotive Network</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="aboout.html">About</a>
+            <a href="contact.htm">Contact</a>
+            <a href="donate.html">Donate</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+            const html = document.documentElement;
+            if (html.getAttribute("data-theme") === "light") {
+                html.setAttribute("data-theme", "dark");
+                toggle.textContent = "☀️";
+            } else {
+                html.setAttribute("data-theme", "light");
+                toggle.textContent = "🌙";
+            }
+        });
+
+        let selectedAmount = 0;
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            
+            // Update button styles
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Find and mark the clicked button
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                if (btn.textContent.includes(amount)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update donate button text
+            document.getElementById('donate-btn').textContent = `Donate $${amount} Now`;
+        }
+
+        function handleDonation(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('donor-name').value;
+            const email = document.getElementById('donor-email').value;
+            const method = document.querySelector('input[name="method"]:checked').value;
+            const message = document.getElementById('donor-message').value;
+            const anonymous = document.getElementById('anonymous').checked;
+
+            if (!selectedAmount || selectedAmount < 1) {
+                alert('Please select a donation amount');
+                return;
+            }
+
+            if (!name || !email) {
+                alert('Please fill in your name and email');
+                return;
+            }
+
+            // Show success message
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.innerHTML = `
+                <h3>Thank You! 💚</h3>
+                <p>Your donation of $${selectedAmount} is being processed.</p>
+                <p>A confirmation email will be sent to ${email}</p>
+            `;
+            
+            document.querySelector('.donate-container').insertBefore(
+                successDiv, 
+                document.querySelector('.donate-container').firstChild
+            );
+
+            // Reset form
+            setTimeout(() => {
+                document.querySelector('form').reset();
+                selectedAmount = 0;
+                document.getElementById('donate-btn').textContent = 'Donate $0 Now';
+                document.querySelectorAll('.amount-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+            }, 2000);
+        }
+
+        // Update donate button text when custom amount changes
+        document.getElementById('custom-amount')?.addEventListener('change', function() {
+            if (this.value) {
+                selectAmount(this.value);
+            }
+        });
+    </script>
+</body>
+</html>

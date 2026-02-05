@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SupremeMotive Network</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cool.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">suprememotive</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="aboout.html">About</a>
+                <a href="contact.htm">Contact</a>
+                <a href="donate.html">Coffee me</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-contact">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+    </section>
+
+    <main class="contact-container">
+        <section class="contact-form-section">
+            <h2>Send us a Message</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required rows="6" placeholder="Tell us your thoughts..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+        </section>
+
+        <section class="contact-info-section">
+            <h2>Other Ways to Reach Us</h2>
+            
+            <div class="info-card">
+                <div class="info-icon">📍</div>
+                <h3>Address</h3>
+                <p>123 Motivation Street<br>Ambition City, AC 12345<br>United States</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📧</div>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@suprememotive.com">hello@suprememotive.com</a><br>
+                <a href="mailto:support@suprememotive.com">support@suprememotive.com</a></p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">📱</div>
+                <h3>Phone</h3>
+                <p><a href="tel:+15551234567">+1 (555) 123-4567</a><br>
+                Mon-Fri 9am-6pm EST</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon">🌐</div>
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">LinkedIn</a>
+                    <a href="#" class="social-icon">YouTube</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SupremeMotive Network</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="aboout.html">About</a>
+            <a href="contact.htm">Contact</a>
+            <a href="donate.html">Coffee me</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+            const html = document.documentElement;
+            if (html.getAttribute("data-theme") === "light") {
+                html.setAttribute("data-theme", "dark");
+                toggle.textContent = "☀️";
+            } else {
+                html.setAttribute("data-theme", "light");
+                toggle.textContent = "🌙";
+            }
+        });
+
+        // Handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const formStatus = document.getElementById("formStatus");
+            
+            // Simulate form submission
+            formStatus.textContent = "✓ Message sent successfully! We'll get back to you soon.";
+            formStatus.style.color = "#2ecc71";
+            formStatus.style.display = "block";
+            
+            this.reset();
+            setTimeout(() => {
+                formStatus.style.display = "none";
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
